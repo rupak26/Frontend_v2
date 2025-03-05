@@ -1,0 +1,87 @@
+
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 100px auto;
+  }
+  .login-container h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .login-container input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  .login-container input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  .login-container input[type="email"]:focus,
+  .login-container input[type="password"]:focus {
+    border-color: crimson;
+    outline: none;
+  }
+  
+  .login-container button[type="submit"] {
+    width: 100%;
+    background: crimson;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .login-container button[type="submit"]:hover {
+    background: darkred;
+  }
+  
+  /* Forgot Password Section */
+  .login-container h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  .login-container p button {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: crimson;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  /* Forgot Password Button Hover */
+  .login-container p button:hover {
+    color: darkred;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 450px) {
+    .login-container {
+      max-width: 90%;
+    }
+  }
+  

@@ -1,0 +1,72 @@
+/* General Reset */
+  
+  /* Centering the Verify Container */
+  .verify-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f4f4;
+  }
+  
+  /* Verify Box */
+  .verify-box {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Heading */
+  .verify-box h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  .verify-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border 0.3s ease;
+  }
+  
+  /* Input Focus Effect */
+  .verify-box input:focus {
+    border-color: crimson;
+    outline: none;
+  }
+  
+  /* Submit Button */
+  .verify-box button {
+    width: 100%;
+    background: crimson;
+    color: white;
+    font-size: 18px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  /* Button Hover Effect */
+  .verify-box button:hover {
+    background: darkred;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 450px) {
+    .verify-box {
+      max-width: 90%;
+    }
+  }
+  
