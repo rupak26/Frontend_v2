@@ -14,7 +14,7 @@ const ForgetPassword = () => {
   const handleRequestOTP = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`http://44.192.125.34:8000/user/forget-password/`, {
+      const response = await fetch(`/api/user/forget-password/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

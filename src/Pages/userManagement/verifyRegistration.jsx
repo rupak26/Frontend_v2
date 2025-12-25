@@ -13,7 +13,7 @@ const VerifyRegistration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://44.192.125.34:8000/user/verify/`, {
+      const response = await fetch(`/api/user/verify/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),

@@ -19,7 +19,7 @@ const Register = () => {
         password: password 
       });
      try{ 
-        const response = await fetch(`http://44.192.125.34:8000/user/register/`, {
+        const response = await fetch(`/api/user/register/`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: requestData,
