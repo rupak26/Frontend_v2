@@ -14,12 +14,17 @@ const getAuthHeaders = () => {
 };
 
 export const fetchPosts = async () => {
-  const response = await axiosInstance.get("/view", { headers: getAuthHeaders() });
+  const response = await axiosInstance.get("view/", { headers: getAuthHeaders() });
+  return response.data;
+};
+
+export const fetchPost = async (postId) => {
+  const response = await axiosInstance.get(`view/${postId}/`, { headers: getAuthHeaders() });
   return response.data;
 };
 
 export const createPost = async (postData) => {
-  const response = await axiosInstance.post("/post", postData, { headers: getAuthHeaders() });
+  const response = await axiosInstance.post("post/", postData, { headers: getAuthHeaders() });
   return response.data;
 };
 
