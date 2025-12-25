@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/Register.css" ;
+const URL = process.env.REACT_APP_API_URL
 
 const Register = () => {
   const [username , setUsername] =  useState("");  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate(); 
-  const URL = process.env.REACT_APP_API_URL
+ 
 
   const handleRegister = async (e) => {
       e.preventDefault();

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/ForgetPassword.css"; 
+const URL = process.env.REACT_APP_API_URL
 
 const ForgetPassword = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ const ForgetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [step, setStep] = useState(1); 
   const navigate = useNavigate();
-  const URL = process.env.REACT_APP_API_URL
+ 
 
   const handleRequestOTP = async (e) => {
     e.preventDefault();

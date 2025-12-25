@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/VerifyRegistration.css";
+const URL = process.env.REACT_APP_API_URL
 
 const VerifyRegistration = () => {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
-  const URL = process.env.REACT_APP_API_URL
+  
 
   const handleVerify = async (e) => {
     e.preventDefault();
