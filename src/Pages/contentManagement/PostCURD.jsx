@@ -1,7 +1,7 @@
 import axios from "axios";
 const URL = process.env.REACT_APP_API_URL
 
-const API_URL = `/api/content/post/`; 
+const API_URL = `/api/content/`; 
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
@@ -14,12 +14,12 @@ const getAuthHeaders = () => {
 };
 
 export const fetchPosts = async () => {
-  const response = await axiosInstance.get("/", { headers: getAuthHeaders() });
+  const response = await axiosInstance.get("view/", { headers: getAuthHeaders() });
   return response.data;
 };
 
 export const createPost = async (postData) => {
-  const response = await axiosInstance.post("/", postData, { headers: getAuthHeaders() });
+  const response = await axiosInstance.post("post/", postData, { headers: getAuthHeaders() });
   return response.data;
 };
 
