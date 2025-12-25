@@ -14,7 +14,7 @@ const BlogFeed = () => {
   const [message, setMessage] = useState("");
   const [editPost, setEditPost] = useState(null);
   const limit = 5;
-  const API_BASE_URL = `${URL}/content`;
+  const API_BASE_URL = `http://44.192.125.34:8000/content`;
   const token = localStorage.getItem("token");
 
   // Fetch posts from API

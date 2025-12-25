@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/VerifyRegistration.css";
-const URL = process.env.REACT_APP_API_URL
+
 
 const VerifyRegistration = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ const VerifyRegistration = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${URL}/user/verify/`, {
+      const response = await fetch(`http://44.192.125.34:8000/user/verify/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),
