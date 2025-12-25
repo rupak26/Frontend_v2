@@ -6,12 +6,13 @@ const VerifyRegistration = () => {
   const [email, setEmail] = useState("");
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
+  const URL = process.env.REACT_APP_API_URL
 
   const handleVerify = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/user/verify/", {
+      const response = await fetch(`${URL}/user/verify/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp }),

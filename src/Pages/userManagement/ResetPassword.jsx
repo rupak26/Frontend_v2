@@ -8,11 +8,12 @@ const ForgetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const [step, setStep] = useState(1); 
   const navigate = useNavigate();
+  const URL = process.env.REACT_APP_API_URL
 
   const handleRequestOTP = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:8000/user/forget-password/", {
+      const response = await fetch(`${URL}/user/forget-password/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -37,7 +38,7 @@ const ForgetPassword = () => {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://127.0.0.1:8000/user/reset-password/", {
+      const response = await fetch(`${URL}/user/reset-password/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp, new_password: newPassword }),

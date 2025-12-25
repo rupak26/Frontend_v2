@@ -13,7 +13,8 @@ const BlogFeed = () => {
   const [message, setMessage] = useState("");
   const [editPost, setEditPost] = useState(null);
   const limit = 5;
-  const API_BASE_URL = "http://127.0.0.1:8000/content";
+  const URL = process.env.REACT_APP_API_URL
+  const API_BASE_URL = `${URL}/content`;
   const token = localStorage.getItem("token");
 
   // Fetch posts from API
