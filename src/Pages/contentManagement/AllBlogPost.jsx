@@ -27,7 +27,7 @@ const BlogFeed = () => {
         url += `&keyword=${search}`;
       }
       const response = await axios.get(url);
-      setPosts(response.data.results || response.data);
+      setPosts(response.data);
     } catch (error) {
       setError("Error fetching posts");
     }
