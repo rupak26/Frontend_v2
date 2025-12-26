@@ -18,7 +18,7 @@ const Register = () => {
         password: password 
       });
      try{ 
-        const response = await fetch(`http://3.239.105.239:8000/user/register/`, {
+        const response = await fetch(`/api/user/register/`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: requestData,

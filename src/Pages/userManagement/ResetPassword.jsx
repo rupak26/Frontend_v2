@@ -39,7 +39,7 @@ const ForgetPassword = () => {
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${URL}/user/reset-password/`, {
+      const response = await fetch(`/api/user/reset-password/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp, new_password: newPassword }),
