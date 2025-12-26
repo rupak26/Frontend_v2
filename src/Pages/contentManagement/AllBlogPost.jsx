@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../Style/Feed.css";
-const URL = process.env.REACT_APP_API_URL
+
 
 const BlogFeed = () => {
   const [posts, setPosts] = useState([]);
@@ -14,7 +14,8 @@ const BlogFeed = () => {
   const [message, setMessage] = useState("");
   const [editPost, setEditPost] = useState(null);
   const limit = 5;
-  const API_BASE_URL = `/api/content`;
+  const API_BASE_URL ='http://3.239.105.239:8000/content'
+  // `/api/content`;
   const token = localStorage.getItem("token");
 
   // Fetch posts from API
@@ -29,6 +30,8 @@ const BlogFeed = () => {
       const response = await axios.get(url);
       setPosts(response.data);
     } catch (error) {
+     // console.log("=================================================================")
+      console.log(error)
       setError("Error fetching posts");
     }
     setLoading(false);

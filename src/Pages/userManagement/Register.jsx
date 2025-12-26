@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../Style/Register.css" ;
-const URL = process.env.REACT_APP_API_URL
 
 const Register = () => {
   const [username , setUsername] =  useState("");  
@@ -19,7 +18,7 @@ const Register = () => {
         password: password 
       });
      try{ 
-        const response = await fetch(`/api/user/register/`, {
+        const response = await fetch(`http://3.239.105.239:8000/user/register/`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: requestData,
