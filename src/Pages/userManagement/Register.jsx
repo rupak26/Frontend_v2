@@ -28,7 +28,7 @@ const Register = () => {
         
         if (response.ok) {
           alert("Registration successful! Please Verify Your Account.");
-          navigate("/verfy");
+          navigate("/login");
         } else {
           alert(`Registration failed: ${data.message || "Unknown error"}`);
         }
